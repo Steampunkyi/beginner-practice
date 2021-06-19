@@ -1,20 +1,14 @@
-print("Proporcione los siguientes datos del libro:")
+# Ejercicio de edad
+edad = int(input("Proporciona tu edad: "))
+etapaVida = None
 
-nombreLibro = input("Proporciona el nombre: ")
-id = int(input("Proporciona el ID: "))
-precio = float(input("Proporciona el precio: "))
-envio = input("Indica si el envío es gratuito (True/False): ")
-
-if envio == "True":
-    envio = True
-elif envio == "False":
-    envio = False
+if 0 <= edad < 10:
+    etapaVida = "La infancia es increible..."
+elif edad >= 10 and edad < 20:
+    etapaVida = "Muchos cambios y mucho estudio..."
+elif edad >= 20 and edad < 30:
+    etapaVida = "Amor y comienza el trabajo..."
 else:
-    envio = "Valor incorrecto. Debe escribir True/False."
+    etapaVida = "Etapa de vida no reconocida"
 
-print(f'''
-    Nombre: {nombreLibro}
-    Id: {id}
-    Precio: {precio}
-    ¿Envío Gratuito?: {envio}
-''')
+print(f"A los {edad} años {etapaVida}")
